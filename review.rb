@@ -54,3 +54,47 @@ until i >= n
   i += 1
 end
 
+a = {}
+a["foo"]=1
+#print a["foo"]
+
+a = [1,2,3,4,5]
+sum = 0
+a.each {|x| sum = sum + x}
+printf("sum is %d\n", sum)
+
+s = "student,Sally,03343,A"
+s.split(',').each{|x| puts x}
+
+
+puts [5,4,3].collect{|x| -x}
+
+population = {}
+population["USA"] = 319
+population["Italy"] = 60
+population.each{|key, value| puts "population of #{key} is #{value} million"}
+population.keys.each{|k| puts "key:", k, "value:", population[k]}
+
+def countx(x)
+  for i in (1..x)
+    puts i
+    yield
+  end
+end
+
+countx(4){puts "yyy"}
+
+a = "abc"
+b = "abc"
+puts a == b   #=>true
+puts a.equal?b  #=>false
+
+
+
+
+
+
+
+
+
+
