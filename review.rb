@@ -21,12 +21,6 @@ case number
 end
 
 
-unless false
-  puts "if false then action"
-else
-  puts "non-action"
-end
-
 
 3.times {|count| puts count}
 1.upto(10) {|count| puts count}
@@ -41,4 +35,22 @@ a.each {|el| print el + " "}
 
 print ['H','A','L'].collect{|x| x.succ}
 print [1,3,5,7,9,2,6].find{|x| x%2 == 0}
+
+unless grade < 90 then
+  puts "You got an A"
+else unless grade < 80 then
+       puts "You got a B"
+     end
+end
+
+
+puts "You got an A" if grade >= 90
+puts "You got an A " unless grade < 90
+
+i = 0
+n = 5
+until i >= n
+  puts "print"
+  i += 1
+end
 
