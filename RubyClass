@@ -1,0 +1,66 @@
+class Person
+    attr_accessor:name,:age
+    @@total=0;
+    
+    def initialize(name,age)
+        @@total+=1
+        @name=name
+        @age=age
+    end
+    
+    def to_person
+        return "(#@name,#@age)"
+    end
+    
+    def Person.total
+        return"number of person:#@@total"
+    end
+    
+end
+
+p1 = Person.new("Jone" , 13)
+puts p1.name
+
+puts p1.respond_to?("name")
+puts p1.respond_to?("setName")
+puts p1.class
+
+a = 1
+b = 2
+
+puts c = a + b
+d = a. + b    //call method and plus on a
+puts d
+
+
+module
+modules have no instances, like class methods
+
+only consider the last method if the method is been overloading
+
+
+
+
+class Point
+def initialize(x,y)
+ @x =x
+ @y = y
+end
+def add(x)
+ @x += x
+end
+
+def add(x,y)
+ @x += x
+ @y += y
+end
+def to_s
+ return "("+@x.to_s+","+@y.to_s+")"
+end
+end
+p1=Point.new(5,10)
+p1.add(2)
+puts(p1.to_s)
+p2=Point.new(7,11)
+p2.add(5,9)
+puts(p2.to_s)
